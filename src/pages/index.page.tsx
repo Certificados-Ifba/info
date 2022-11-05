@@ -9,13 +9,13 @@ const Home: NextPage = () => {
       <Head>
         <title>Certificados</title>
         <meta name="description" content="Sistema de certificados IFBA" />
-        <link rel="icon" href="/certificados/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main>
-        <Image src="/certificados/logo.svg" alt="Logo Certificados" width={636} height={100} />
+        <Image src="/logo.svg" alt="Logo Certificados" width={636} height={100} />
         <h1>Atenção</h1>
         <h2>
-          O sistema está em processo de implantação no IFBA Campus Vitória da Conquista no domínio <a href="http://vca.ifba.edu.br:81/certificados" target="_blank" rel="noopener noreferrer">vca.ifba.edu.br:81/certificados</a>
+          O sistema está em processo de implantação no IFBA Campus Vitória da Conquista no domínio <a href="http://certificados.vca.ifba.edu.br" target="_blank" rel="noopener noreferrer">certificados.vca.ifba.edu.br</a>
         </h2>
         <h2>
           A versão anterior pode ser acessar em: <a href="http://certificados.conquista.ifba.edu.br" target="_blank" rel="noopener noreferrer">certificados.conquista.ifba.edu.br</a>

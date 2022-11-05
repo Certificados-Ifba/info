@@ -8,4 +8,4 @@ docker-compose -f info.yml push
 echo "deploying traefik stack in http mode"
 docker stack deploy -c info.yml info
 echo "Certificates is available at:"
-echo "- http://${DOMAIN}/certificados"
+echo "- http://certificados.${DOMAIN}"

@@ -12,12 +12,7 @@ services:
         - traefik.docker.network=public
         - traefik.http.routers.certificates-info.service=certificates-info
         - traefik.http.routers.certificates-info.entrypoints=web
-        - traefik.http.routers.certificates-info.rule=(Host(`${DOMAIN:-localhost}`) && PathPrefix(`/certificados`))
-        - traefik.http.routers.certificates-info.middlewares=certificates-info-redirectregex, certificates-info-replacepathregex
-        - traefik.http.middlewares.certificates-info-replacepathregex.replacepathregex.regex=^/docker/(.*)
-        - traefik.http.middlewares.certificates-info-replacepathregex.replacepathregex.replacement=/$$1
-        - traefik.http.middlewares.certificates-info-redirectregex.redirectregex.regex=^(.*)/docker$$
-        - traefik.http.middlewares.certificates-info-redirectregex.redirectregex.replacement=$$1/docker/
+        - traefik.http.routers.certificates-info.rule=(Host(`certificados.${DOMAIN:-localhost}`))
         - traefik.http.services.certificates-info.loadbalancer.server.port=3000
     logging:
       driver: json-file
